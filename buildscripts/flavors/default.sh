@@ -242,6 +242,7 @@ cpuflags=
 	--enable-protocol=rtp \
 	--enable-protocol=subfile \
 	--enable-protocol=tcp \
+	--enable-protocol=udp \
 	--enable-protocol=tls \
 	--enable-protocol=srt \
 	\
@@ -253,6 +254,9 @@ cpuflags=
 	--enable-encoder=jpegls \
 	\
 	--enable-network \
+	\
+	--enable-muxer=matroska \
+	--enable-muxer=mpegts \
 
 make -j$cores
 make DESTDIR="$prefix_dir" install
